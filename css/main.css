@@ -34,6 +34,8 @@ a:visited { color: #a0a; }
 }
 
 /*** fonts ***/
+/* Fantasque Sans Mono, an amazing monospaced font licensed under OFL. */
+/* See : https://github.com/belluzj/fantasque-sans                     */
 @font-face {
     font-family: "Fantasque Sans Mono";
     font-weight: normal;
