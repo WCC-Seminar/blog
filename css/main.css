@@ -30,6 +30,26 @@ a:hover   { color: #000; }
 a:visited { color: #a0a; }
 a.meta {text-decoration: none; }
 
+/*** fonts ***/
+@font-face {
+    font-family: "Fantasque Sans Mono";
+    font-weight: normal;
+    font-style: normal;
+    src: url("{{ site.baseurl }}/fonts/fantasque-sans-mono/FantasqueSansMono_Regular.otf");
+    }
+    @font-face {
+    font-family: "Fantasque Sans Mono";
+    font-weight: normal;
+    font-style: italic;
+    src: url("{{ site.baseurl }}/fonts/fantasque-sans-mono/FantasqueSansMono_RegItalic.otf");
+}
+@font-face {
+    font-family: "Fantasque Sans Mono";
+    font-weight: bold;
+    font-style: normal;
+    src: url("{{ site.baseurl }}/fonts/fantasque-sans-mono/FantasqueSansMono_Bold.otf");
+}
+
 /*****************************************************************************/
 /*
 /* Home
@@ -140,6 +160,7 @@ a.meta {text-decoration: none; }
 }
 
 .post code {
+  font-family: "Fantasque Sans Mono", monospace;
   border: 1px solid #ddd;
   background-color: #eef;
   padding: 0 .2em;
