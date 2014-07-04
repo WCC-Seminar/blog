@@ -9,7 +9,7 @@ codename: code/2014/06/27/helloworld-cpp.cpp
 
 ##ちょっとテスト
 {% highlight c++ %}
-{% include {{ page.date | date: "code/%Y/%m/%d/helloworld-cpp.cpp"}} %}
+{% include code/2014/06/27/helloworld-cpp.cpp %}
 {% endhighlight %}
 
 
