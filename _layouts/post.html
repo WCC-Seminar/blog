@@ -9,7 +9,9 @@ layout: default
    <br />
    <p class="right meta">
      Author: {{ page.author }}<br />
-     Category: <a href="/" >{{ page.categories }}</a>
+     Category: <a href={{site.baseurl}}/category.html?category={{page.categories}} >{{ page.categories }}</a><br />
+     Tags: {% for tag in page.tags %} <span> <a href={{site.baseurl}}/tag.html?tag={{tag}} >{{ tag  }}</a> </span> {% endfor %}
+     
    </p>
    <div id="page-move" class="clearfix">
 {% if {{page.previous.url}} %}

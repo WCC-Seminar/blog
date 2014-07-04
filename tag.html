@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<html>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript">
+     
+     get_content=function(){
+       var tag_name="";
+       var qs = location.search.substring(1).split("&");
+       for (i in qs){
+         var foo=qs[i].split("=");
+         if(foo[0]==="tag"){
+           tag_name=foo[1];
+         }
+       }
+       document.getElementById("title_body").innerHTML=tag_name;
+       if (tag_name !== ""){
+         tag_name = " #"+ tag_name;
+       }else{
+         tag_name = " #tags";
+       }
+       $("#main_body").load("{{site.baseurl}}/tags.html"+tag_name);
+     };
+    </script>
+  </head>
+  <body onload="get_content()">
+    <h2 id="title_body"></h2>
+    <p id="main_body">loading...</p>
+  </body>
+</html>
