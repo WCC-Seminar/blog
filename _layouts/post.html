@@ -9,8 +9,14 @@ layout: default
    <br />
    <p class="right meta">
      Author: {{ page.author }}<br />
-     <a href="/" >
-       Category: {{ page.categories }}
-     </a>
+     Category: <a href="/" >{{ page.categories }}</a>
    </p>
+   <div id="page-move" class="clearfix">
+{% if {{page.previous.url}} %}
+  <p id="previous">previous<br /><a href="{{site.baseurl}}{{ page.previous.url }}">&lt; {{page.previous.title}}</a></p>
+{% endif %}
+{% if {{page.next.url}} %}
+  <p id="next">next<br /><a href="{{site.baseurl}}{{ page.next.url }}">{{page.next.title}} &gt;</a></p>
+{% endif %}
+   </div>
  </div>
