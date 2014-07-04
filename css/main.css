@@ -191,3 +191,33 @@ a:visited { color: #a0a; }
 .post pre.terminal code {
   background-color: #333;
 }
+
+.post div#page-move p#previous{
+  float: left;
+}
+.post div#page-move p#next{
+  float: right;
+}
+.post div#page-move {
+}
+
+
+
+.clearfix:after {
+    content: " ";
+    display: table; 
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+    min-height: 1px;
+}
+* html .clearfix {
+    height: 1px;
+    /*¥*//*/
+    height: auto;
+    overflow: hidden;
+    /**/
+}

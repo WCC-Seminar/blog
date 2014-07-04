@@ -13,4 +13,12 @@ layout: default
        Category: {{ page.categories }}
      </a>
    </p>
+   <div id="page-move" class="clearfix">
+{% if {{page.previous.url}} %}
+  <p id="previous"><a href="{{site.baseurl}}{{ page.previous.url }}">previous<br />&lt; {{page.previous.title}}</a></p>
+{% endif %}
+{% if {{page.next.url}} %}
+  <p id="next"><a href="{{site.baseurl}}{{ page.next.url }}">next<br />{{page.next.title}} &gt;</a></p>
+{% endif %}
+   </div>
  </div>
