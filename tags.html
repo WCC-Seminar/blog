@@ -7,7 +7,7 @@ layout: default
   <ul class="tags" id="tags">
     {% for tag in site.tags %}
     <li>{{tag|first}}
-      <ul class="posts" id="{{tag|first}}">
+      <ul class="posts" id='{{tag|first}}'>
         {% for posts in tag %} {% for post in posts %} {% if post.url %}
         <li><span>{{post.date|date_to_string}} &raquo; </span><a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a></li>
         {% endif %} {% endfor %} {% endfor %}

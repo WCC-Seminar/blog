@@ -10,18 +10,19 @@ layout: default
        var tag_name="";
        var qs = location.search.substring(1).split("&");
        for (i in qs){
-         var foo=qs[i].split("=");
-         if(foo[0]==="tag"){
-           tag_name=foo[1];
+         var oneq=qs[i].split("=");
+         if(oneq[0]==="tag"){
+           tag_name=unescape(oneq[1]);
          }
        }
        document.getElementById("title_body").innerHTML=tag_name;
+       tag_name=tag_name.replace(/([\.\\\+\-\*#!"$%&'\(\)\/:;<=>\?@\[\]^`\{\|\}~\s])/g , "\\$1" );
        if (tag_name !== ""){
-         tag_name = " #"+ tag_name;
+         tag_name = ' #'+ tag_name;
        }else{
          tag_name = " #tags";
        }
-       $("#main_body").load("{{site.baseurl}}/tags.html"+tag_name);
+       $("#main_body").load("{{site.baseurl}}/tags.html" +tag_name);
      };
     </script>
   </head>
